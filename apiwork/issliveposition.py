@@ -25,7 +25,7 @@ def get_Iss_position():
 	response = requests.get(Iss_pos_api_url)
 	data = response.json()
 
-	
+
 
 	if data["message"]=="success":
 		lat = data["iss_position"]["latitude"]
@@ -35,7 +35,7 @@ def get_Iss_position():
 	else:
 		print('erorr')
 
-	
+
 
 def Is_water():
 
@@ -51,7 +51,7 @@ def Is_water():
 	elif data["water"] == False:
 		loc = location_finder(get_location())
 		print(loc)
-		
+
 def get_location():
 
 	lat, lng = get_Iss_position()
